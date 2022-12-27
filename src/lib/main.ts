@@ -11,9 +11,7 @@ function getData() {
 export function main() {
   const data = getData();
   if (!data) {
-    alert(
-      '英傑大戦.netのデータリストページではない。または読み込み中の可能性があります。'
-    );
+    alert('英傑大戦.netのデータリストページではない。または読み込み中の可能性があります。');
     return;
   }
   const playerData = data.playerData?.[0];
@@ -22,10 +20,7 @@ export function main() {
     return;
   }
   try {
-    const totalGift = playerData.card_gift_num.reduce(
-      (total, giftNum) => total + giftNum,
-      0
-    );
+    const totalGift = playerData.card_gift_num.reduce((total, giftNum) => total + giftNum, 0);
     const totalPlayNum = playerData.total_play_num;
     const totalPayment = (totalPlayNum + totalGift) * ONE_CREDIT;
     const message = `英傑大戦の総プレイ料金は
@@ -37,8 +32,6 @@ export function main() {
     alert(message);
   } catch (e) {
     console.error(e);
-    alert(
-      'エラーが発生しました。このブックマークレットは使えなくなった可能性があります。'
-    );
+    alert('エラーが発生しました。このブックマークレットは使えなくなった可能性があります。');
   }
 }
