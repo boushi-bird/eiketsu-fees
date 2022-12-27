@@ -4,7 +4,7 @@ title: TOP
 
 ### このツールについて
 
-![](sample.png)
+![](sample.png){: width="400" }
 
 [英傑大戦.NET の データリスト](https://eiketsu-taisen.net/datalist/)から、総プレイ料金を算出できるブックマークレットです。
 
